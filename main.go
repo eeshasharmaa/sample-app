@@ -39,10 +39,6 @@ import (
 	"net/http"
 )
 
-func main() {
-	http.HandleFunc("/blue", blueHandler)
-	http.ListenAndServe(":8080", nil)
-}
 
 func blueHandler(w http.ResponseWriter, r *http.Request) {
 	img := image.NewRGBA(image.Rect(0, 0, 100, 100))
